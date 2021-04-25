@@ -1,5 +1,7 @@
 package controller;
 
+import model.gameMakerModel;
+
 /**
  * @ProjectName Kakuro
  * @ClassName gameMakerController
@@ -8,4 +10,7 @@ package controller;
  * @PackageName controller
  **/
 public class gameMakerController {
+    public String getFormattime(int count){
+        gameMakerModel.getFormattime(count);
+    }
 }
