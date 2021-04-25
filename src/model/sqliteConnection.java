@@ -11,9 +11,6 @@ import java.sql.SQLException;
  * @PackageName model
  **/
 public class sqliteConnection {
-
-
-
     public static  void getConnection(){
 
         Connection conn = null;

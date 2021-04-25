@@ -39,9 +39,7 @@ public class MainPage {
         buttonBegin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                GamePage gamePage = new GamePage();
-//                GamePage.gamePageFrame.setVisible(true);
-//                MainFrame.dispose();
+
 
             }
         });
