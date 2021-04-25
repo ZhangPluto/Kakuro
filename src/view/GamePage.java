@@ -12,18 +12,12 @@ import java.awt.event.ActionListener;
  * @PackageName view
  **/
 public class GamePage {
-    private JPanel gamePanel;
+    public JPanel gamePanel;
     private JButton buttonQuit;
     private JButton buttonBack;
 
-    public static void main(String[] args) {
-        JFrame gamePageFrame = new JFrame("GamePage");
-        gamePageFrame.setSize(1280,720);
-        gamePageFrame.setContentPane(new GamePage().gamePanel);
-        gamePageFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gamePageFrame.pack();
-        gamePageFrame.setVisible(true);
-    }
+
+
     public GamePage() {
         buttonQuit.addActionListener(new ActionListener() {
             @Override
@@ -34,10 +28,10 @@ public class GamePage {
         buttonBack.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MainPage mainPage = new MainPage();
-                mainPage.mainPanel.setVisible(true);
-                mainPage.mainPanel.setSize(1280,720);
-//                gamePageFrame.dispose();
+                MainPage.MainFrame.setContentPane(new MainPage().mainPanel);
+                MainPage.MainFrame.setTitle("Kakuro");
+                MainPage.MainFrame.setSize(170,170);
+                MainPage.MainFrame.setVisible(true);
             }
         });
     }

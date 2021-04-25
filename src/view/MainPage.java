@@ -18,19 +18,16 @@ public class MainPage {
     private JButton buttonIntroduction;
     private JButton buttonBegin;
     private JButton buttonQuit;
-
-
+    public static final JFrame MainFrame = new JFrame("Kakuro");
 
     public static void main(String[] args) {
-        JFrame MainFrame = new JFrame("MainPage");
-        MainFrame.setUndecorated(true);
         MainFrame.setContentPane(new MainPage().mainPanel);
-        MainFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        MainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         MainFrame.setResizable(false);
         MainFrame.pack();
+        MainFrame.setBackground(Color.GRAY);
+        MainFrame.setSize(170,170);
         MainFrame.setVisible(true);
-        MainFrame.setLocationRelativeTo(MainFrame.getMostRecentFocusOwner());
-        MainFrame.setSize(1280,720);
     }
 
 
@@ -39,26 +36,31 @@ public class MainPage {
         buttonBegin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
+                MainFrame.setTitle("Game Page");
+                MainFrame.setContentPane(new GamePage().gamePanel);
+                MainFrame.setSize(1280,720);
+                MainFrame.setVisible(true);
+                MainFrame.setResizable(false);
             }
         });
         buttonIntroduction.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                HelpPage.helpFrame.setUndecorated(true);
-                HelpPage.helpFrame.setVisible(true);
-                HelpPage.helpFrame.setSize(1280,720);
-
+                MainFrame.setTitle("Help!");
+                MainFrame.setContentPane(new HelpPage().helpPanel);
+                MainFrame.setSize(1280,720);
+                MainFrame.setVisible(true);
+                MainFrame.setResizable(false);
             }
         });
         buttonLeaderBoard.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                LeaderBoardPage.leaderBoardFrame.setUndecorated(true);
-                LeaderBoardPage.leaderBoardFrame.setVisible(true);
-//                LeaderBoardPage.leaderBoardFrame.setSize(1280,720);
-//                MainFrame.dispose();
+                MainFrame.setTitle("Leader Board");
+                MainFrame.setContentPane(new LeaderBoardPage().leaderBoardPanel);
+                MainFrame.setSize(1280,720);
+                MainFrame.setVisible(true);
+                MainFrame.setResizable(false);
             }
         });
         buttonQuit.addActionListener(new ActionListener() {

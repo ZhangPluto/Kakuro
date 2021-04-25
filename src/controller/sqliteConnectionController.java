@@ -1,5 +1,7 @@
 package controller;
 
+import model.sqliteConnection;
+
 /**
  * @ProjectName Kakuro
  * @ClassName sqliteConnectionController
@@ -8,4 +10,7 @@ package controller;
  * @PackageName controller
  **/
 public class sqliteConnectionController {
+    public void ConnectionController(){
+        sqliteConnection.getConnection();
+    }
 }
