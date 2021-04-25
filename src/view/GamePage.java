@@ -15,10 +15,22 @@ public class GamePage {
     public JPanel gamePanel;
     private JButton buttonQuit;
     private JButton buttonBack;
+    public String timeUsed;
+
+
+    public String getTimeUsed(){
+        return timeUsed;
+    }
+
+
 
 
 
     public GamePage() {
+
+
+
+
         buttonQuit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

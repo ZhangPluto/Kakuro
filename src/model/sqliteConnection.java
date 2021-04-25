@@ -1,4 +1,5 @@
 package model;
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -11,28 +12,16 @@ import java.sql.SQLException;
  * @PackageName model
  **/
 public class sqliteConnection {
-    public static void getConnection() {
-
-        Connection conn = null;
+    public static Connection dbConnector(){
         try {
+            Class.forName("org.sqlite.JDBC");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:Kakuro.sqlite");
+            return conn;
 
-            String url = "jdbc:sqlite:Kakuro.sqlite";
-
-            conn = DriverManager.getConnection(url);
-
-            System.out.println("Connection to SQLite has been established! ");
-
-        } catch (SQLException e) {
-            System.out.println((e.getMessage()));
-        } finally {
-            try {
-                if (conn != null) {
-                    conn.close();
-                    ;
-                }
-            } catch (SQLException ex) {
-                System.out.println((ex.getMessage()));
-            }
+        } catch (Exception e) {
+            // TODO: handle exception
+            JOptionPane.showMessageDialog(null, e.getMessage());
+            return null;
         }
     }
 }
