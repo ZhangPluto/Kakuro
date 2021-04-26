@@ -7,6 +7,9 @@
 - SqLite
 - Swing
 
+# How To Open
+- We are using IntelliJ Idea, The main function is in "MainPage.java", so go MainPage.java and run Main function.
+
 # Code Submission Rules
 ## Attention!! Any submissions that do not follow the rules will be deleted!!
 - Each programmer should fork this repository to their own GitHub, rather than committing code in this repository (the main repository or the upstream repository), any code committed directly in that repository will be deleted
@@ -23,6 +26,10 @@
 - Java 1.8
 - SqLite
 - Swing
+
+# 如何打开
+- 我们使用的是IntelliJ Idea，主函数在 "MainPage.java "中，所以进入MainPage.java并运行主函数。
+
 
 # 代码提交规则
 ## 注意！！！任何不遵守规则的提交都将被删除!
