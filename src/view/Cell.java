@@ -26,9 +26,6 @@ public class Cell extends JTextField {
     private String upperOriginal;
     private String lowerOriginal;
 
-    private int upperSum = 0;
-    private int lowerSum = 0;
-
     private int numberEntered = 0;
 
     private int rowNumber;
