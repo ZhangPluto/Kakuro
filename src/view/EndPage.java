@@ -33,7 +33,7 @@ public class EndPage {
         frame.setVisible(true);
     }
 
-    public EndPage() {
+    public void insert(){
         sqliteConnectionController conn = new sqliteConnectionController();
         GamePage gamePage = new GamePage();
         connection = conn.ConnectionController();
@@ -49,10 +49,15 @@ public class EndPage {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+    }
+
+
+    public EndPage() {
+
         buttonOk.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                insert();
             }
         });
     }
