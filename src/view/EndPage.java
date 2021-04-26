@@ -37,12 +37,12 @@ public class EndPage {
         sqliteConnectionController conn = new sqliteConnectionController();
         GamePage gamePage = new GamePage();
         connection = conn.ConnectionController();
-        timeLabel.setText(gamePage.getTimeUsed());
+        timeLabel.setText(gamePage.isWinner());
         try {
             String query = "insert into userInformation (user_name,timeUsed) values (?,?)";
             PreparedStatement pst = connection.prepareStatement(query);
             pst.setString(1,textFieldId.getText());
-            pst.setString(2,gamePage.getTimeUsed());
+            pst.setString(2,gamePage.isWinner());
             pst.execute();
             JOptionPane.showMessageDialog(null,"Data saved");
             pst.close();
