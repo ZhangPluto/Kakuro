@@ -29,6 +29,11 @@
           <text value="Back"/>
         </properties>
       </component>
+      <vspacer id="a5970">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
     </children>
   </grid>
 </form>

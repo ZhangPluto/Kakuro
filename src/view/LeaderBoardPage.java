@@ -18,22 +18,14 @@ public class LeaderBoardPage {
     private JButton buttonQuit;
     public static JFrame leaderBoardFrame = new JFrame("LeaderBoardPage");
 
-    public static void main(String[] args) {
-        leaderBoardFrame.setContentPane(new LeaderBoardPage().leaderBoardPanel);
-        leaderBoardFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        leaderBoardFrame.pack();
-        leaderBoardFrame.setVisible(true);
-        leaderBoardFrame.setSize(1280,720);
-    }
-
     public LeaderBoardPage() {
         buttonBack.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MainPage mainPage = new MainPage();
-                mainPage.mainPanel.setVisible(true);
-                mainPage.mainPanel.setSize(1280,720);
-                leaderBoardFrame.dispose();
+                MainPage.MainFrame.setContentPane(new MainPage().mainPanel);
+                MainPage.MainFrame.setTitle("Kakuro");
+                MainPage.MainFrame.setSize(170,170);
+                MainPage.MainFrame.setVisible(true);
             }
         });
         buttonQuit.addActionListener(new ActionListener() {

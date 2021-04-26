@@ -1,6 +1,7 @@
 package view;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,33 +15,29 @@ import java.awt.event.ActionListener;
 public class HelpPage {
     public JPanel helpPanel;
     private JButton buttonBack;
-    private JLabel infoLabel;
-    private JButton buttonQuit;
-    public static JFrame helpFrame = new JFrame("HelpPage");
-
-    public static void main(String[] args) {
-        helpFrame.setUndecorated(true);
-        helpFrame.setContentPane(new HelpPage().helpPanel);
-        helpFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        helpFrame.pack();
-        helpFrame.setVisible(true);
-        helpFrame.setSize(1280,720);
-    }
+    private JLabel infoLabel1;
+    private JLabel infoLabel2;
+    private JLabel infoLabel3;
+    private JLabel infoLabel4;
+    private JLabel infoLabel5;
+    private static final JFrame helpPage = new JFrame();
 
     public HelpPage() {
+
+        infoLabel1.setText("Kakuro puzzles are similar with crosswords, but instead of letters the board is filled with digits (from 1 to 9).");
+        infoLabel2.setText("The board's squares need to be filled in with these digits in order to sum up to the specified numbers.");
+        infoLabel5.setText("You are not allowed to use the same digit more than once to obtain a given sum.");
+        infoLabel3.setText("Each Kakuro puzzle has an unique solution.");
+        infoLabel4.setText("Good Luck!");
+        helpPanel.setBackground(Color.red);
+
         buttonBack.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MainPage mainPage = new MainPage();
-                mainPage.mainPanel.setVisible(true);
-                mainPage.mainPanel.setSize(1280,720);
-                helpFrame.dispose();
-            }
-        });
-        buttonQuit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
+                MainPage.MainFrame.setContentPane(new MainPage().mainPanel);
+                MainPage.MainFrame.setTitle("Kakuro");
+                MainPage.MainFrame.setSize(170,170);
+                MainPage.MainFrame.setVisible(true);
             }
         });
     }

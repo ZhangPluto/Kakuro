@@ -11,34 +11,28 @@ import java.sql.SQLException;
  * @PackageName model
  **/
 public class sqliteConnection {
-
-
-
-    public static  void getConnection(){
+    public static void getConnection() {
 
         Connection conn = null;
-        try{
+        try {
 
             String url = "jdbc:sqlite:Kakuro.sqlite";
 
-            conn =DriverManager.getConnection(url);
+            conn = DriverManager.getConnection(url);
 
             System.out.println("Connection to SQLite has been established! ");
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println((e.getMessage()));
-        }finally {
-            try{
-                if(conn != null){
-                    conn.close();;
+        } finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                    ;
                 }
-            }catch (SQLException ex){
+            } catch (SQLException ex) {
                 System.out.println((ex.getMessage()));
             }
         }
-    }
-
-    public static void main(String[] args) {
-        getConnection();
     }
 }
