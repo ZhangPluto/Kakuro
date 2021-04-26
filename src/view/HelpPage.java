@@ -28,8 +28,8 @@ public class HelpPage {
         infoLabel2.setText("The board's squares need to be filled in with these digits in order to sum up to the specified numbers.");
         infoLabel5.setText("You are not allowed to use the same digit more than once to obtain a given sum.");
         infoLabel3.setText("Each Kakuro puzzle has an unique solution.");
-        infoLabel4.setText("Good Luck!");
-        helpPanel.setBackground(Color.red);
+        infoLabel4.setText("You need to double click the white block then click the number button.\n Good Luck!");
+        helpPanel.setBackground(Color.black);
 
         buttonBack.addActionListener(new ActionListener() {
             @Override
