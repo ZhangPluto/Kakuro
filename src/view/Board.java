@@ -439,7 +439,7 @@ public class Board extends JFrame{
                 timeUsed = stopWatch.toString();
                 System.out.println(timeUsed);
                 BoardDis();
-                MainPage.MainFrame.setContentPane(new LeaderBoardPage().leaderBoardPanel);
+                MainPage.MainFrame.setContentPane(new MainPage().mainPanel);
                 MainPage.MainFrame.setTitle("Leader Board");
                 MainPage.MainFrame.setSize(1280,720);
                 MainPage.MainFrame.setVisible(true);
