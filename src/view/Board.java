@@ -439,9 +439,9 @@ public class Board extends JFrame{
                 timeUsed = stopWatch.toString();
                 System.out.println(timeUsed);
                 BoardDis();
-                MainPage.MainFrame.setContentPane(new MainPage().mainPanel);
-                MainPage.MainFrame.setTitle("Kakuro");
-                MainPage.MainFrame.setSize(170,170);
+                MainPage.MainFrame.setContentPane(new LeaderBoardPage().leaderBoardPanel);
+                MainPage.MainFrame.setTitle("Leader Board");
+                MainPage.MainFrame.setSize(1280,720);
                 MainPage.MainFrame.setVisible(true);
                 insert();
             }
