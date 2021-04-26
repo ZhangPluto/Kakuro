@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 /**
  * @ProjectName Kakuro
@@ -36,11 +37,11 @@ public class MainPage {
         buttonBegin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MainFrame.setTitle("Game Page");
-                MainFrame.setContentPane(new GamePage().gamePanel);
-                MainFrame.setSize(1280,720);
-                MainFrame.setVisible(true);
-                MainFrame.setResizable(false);
+                String file = "Resources/10x10Easy.txt";
+                File gameFile = new File(file);
+                Board board = new Board(gameFile);
+                board.setVisible(true);
+                MainFrame.setVisible(false);
             }
         });
         buttonIntroduction.addActionListener(new ActionListener() {

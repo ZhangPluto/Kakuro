@@ -14,7 +14,7 @@
         </constraints>
         <properties>
           <font name="Arial Black" size="18" style="3"/>
-          <foreground color="-1971456"/>
+          <foreground color="-62720"/>
           <text value="erw."/>
         </properties>
       </component>
@@ -32,7 +32,7 @@
         </constraints>
         <properties>
           <font name="Arial Black" size="18" style="3"/>
-          <foreground color="-1971456"/>
+          <foreground color="-62720"/>
           <text value="ewar"/>
         </properties>
       </component>
@@ -42,7 +42,7 @@
         </constraints>
         <properties>
           <font name="Arial Black" size="18" style="3"/>
-          <foreground color="-1971456"/>
+          <foreground color="-62720"/>
           <text value="Label"/>
         </properties>
       </component>
@@ -52,7 +52,7 @@
         </constraints>
         <properties>
           <font name="Arial Black" size="18" style="3"/>
-          <foreground color="-1971456"/>
+          <foreground color="-62720"/>
           <text value="Label"/>
         </properties>
       </component>
@@ -62,7 +62,7 @@
         </constraints>
         <properties>
           <font name="Arial Black" size="18" style="3"/>
-          <foreground color="-1971456"/>
+          <foreground color="-62720"/>
           <text value="Label"/>
         </properties>
       </component>
