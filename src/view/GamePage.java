@@ -3,6 +3,7 @@ package view;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import org.apache.commons.lang3.time.StopWatch;
 
 /**
  * @ProjectName Kakuro
@@ -17,19 +18,13 @@ public class GamePage {
     private JButton buttonBack;
     public String timeUsed;
 
-
-    public String getTimeUsed(){
+    public String isWinner(){
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
         return timeUsed;
     }
 
-
-
-
-
     public GamePage() {
-
-
-
 
         buttonQuit.addActionListener(new ActionListener() {
             @Override
