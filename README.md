@@ -9,6 +9,8 @@
 
 # How To Open
 - We are using IntelliJ Idea, The main function is in "MainPage.java", so go MainPage.java and run Main function.
+- All document are in the "Kakuro-master/Documents"
+- [Download the project at here](https://github.com/ZhangPluto/Kakuro.git)
 
 # Code Submission Rules
 ## Attention!! Any submissions that do not follow the rules will be deleted!!
