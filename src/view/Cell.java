@@ -26,9 +26,6 @@ public class Cell extends JTextField {
     private String upperOriginal;
     private String lowerOriginal;
 
-    private int upperSum = 0;
-    private int lowerSum = 0;
-
     private int numberEntered = 0;
 
     private int rowNumber;
@@ -220,8 +217,6 @@ public class Cell extends JTextField {
         }
 
 
-        //this.setBackground(Color.GREEN);
-
         this.setEditable(false);
 
         this.setOpaque(true);
@@ -230,63 +225,36 @@ public class Cell extends JTextField {
 
     public int getUserNumber() {
 
-        /**
-         * Get the current value stored in the white cell. 0 by default.
-         *
-         * @return int
-         */
-
 
         return numberEntered;
     }
 
     public void numberEntered(int n) {
-        /**
-         * Set the white cell number to a int value.
-         */
 
         numberEntered = n;
     }
 
     public int getUpperNumber() {
 
-        /**
-         * @return a black cell's upper sum. int type
-         *
-         */
-
         return Integer.parseInt(upperNum);
     }
 
     public int getLowerNumber() {
 
-        /**
-         * @return a black cell's lowerSum. int type
-         */
 
         return Integer.parseInt(lowerNum);
     }
 
     public String getCellType() {
 
-        /**
-         * @return String. Cell type.
-         */
         return cellType;
     }
 
     public void setCellType(String t) {
-        /**
-         * Sets cell type to w, b or e.
-         */
         this.cellType = t;
     }
 
     public boolean isWhiteCell() {
-
-        /**
-         * @return boolean. Whether or not a cell is white.
-         */
 
         if(this.cellType.equals("w")) {
             return true;
@@ -295,108 +263,61 @@ public class Cell extends JTextField {
 
     public void displayText(String numberEntered) {
 
-        /**
-         * Displays string on white cell.
-         */
-
         buttonLabel = numberEntered;
 
         if(cellType.equals("w")) this.setText(buttonLabel);
     }
 
     public void setRowNumber(int row) {
-
-        /**
-         * Sets row number.
-         */
-
         rowNumber = row;
 
     }
 
     public void setColumnNumber(int col) {
 
-        /**
-         * Sets column number.
-         */
-
         columnNumber = col;
     }
 
     public int getRowNumber() {
-
-        /**
-         * @return int. Row number.
-         */
-
         return rowNumber;
     }
 
     public int getColumnNumber() {
-
-        /**
-         * @return int. Column number.
-         */
-
         return columnNumber;
     }
 
     public String getButtonLabel() {
-        /**
-         * @return String. Value on white cell.
-         */
         return buttonLabel;
     }
 
     public void setUpperRed() {
-        /**
-         * Sets the black cell's upper sum number to red.
-         */
         upperColor = Color.RED;
     }
 
     public void setUpperGreen() {
-        /**
-         * Sets the black cell's upper sum number to green.
-         */
 
         upperColor = Color.GREEN;
     }
 
     public void setUpperWhite() {
-        /**
-         * Sets the black cell's upper number to white.
-         */
         upperColor = Color.WHITE;
     }
 
     public void setLowerRed() {
-        /**
-         * Sets the black cell's lower sum to red.
-         */
 
         lowerColor = Color.RED;
     }
 
     public void setLowerGreen() {
-        /**
-         * Sets the black cell's lower sum to green.
-         */
         lowerColor = Color.GREEN;
     }
 
     public void setLowerWhite() {
-        /**
-         * Sets the black cell's lower sum to white.
-         */
 
         lowerColor = Color.WHITE;
     }
 
     public void setButtonLabel(String buttonLabel) {
-        /**
-         * Sets cell's label.
-         */
 
         this.buttonLabel = buttonLabel;
     }
